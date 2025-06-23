@@ -768,3 +768,112 @@
       </form>
 
 -->
+
+
+<!-- FIXED & STICKY HEADERS
+
+  🔹 What are Fixed and Sticky Headers?
+      - Headers that stay visible while scrolling.
+      - Useful for navigation menus and branding.
+      - Bootstrap offers `.fixed-top`, `.fixed-bottom`, and `.sticky-top` utilities.
+
+  🔹 Fixed Header (Top):
+      - Use `.fixed-top` class on the navbar or header element.
+      - The element stays at the top of the page during scroll.
+      - Requires padding to avoid overlapping content.
+
+      ✅ Example:
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Fixed Top</a>
+        </div>
+      </nav>
+
+      🔸 Add top padding to `<body>` or first section:
+      <style>
+        body {
+          padding-top: 56px; /* adjust based on navbar height */
+        }
+      </style>
+
+  🔹 Fixed Footer (Bottom):
+      - Use `.fixed-bottom` to keep an element fixed at the bottom.
+
+      ✅ Example:
+      <footer class="bg-dark text-white text-center fixed-bottom py-2">
+        © 2025 My Website
+      </footer>
+
+  🔹 Sticky Header:
+      - Use `.sticky-top` to make header stick **after** it reaches top during scroll.
+      - Works inside scrollable containers or page body.
+
+      ✅ Example:
+      <div class="sticky-top bg-light p-3 border-bottom">
+        <h5>Sticky Header</h5>
+      </div>
+
+  🔹 Key Differences:
+      - `fixed-top`: Always stays on top, needs extra padding.
+      - `sticky-top`: Only sticks when it reaches the top during scroll.
+
+  🔹 Use Cases:
+      - Navigation bars
+      - Section headers
+      - Scrollable content areas
+
+-->
+
+
+<!-- HEIGHT & WIDTH CLASSES
+
+  🔹 What are Height and Width Utilities?
+      - Bootstrap provides utility classes to easily control element dimensions.
+      - Helps set consistent size values using percentages, viewport units, and custom sizes.
+
+  🔹 Width Classes:
+      - Use `.w-{value}` to set element width.
+      - Values can be percentage-based (25, 50, 75, 100), `auto`, or `vw`.
+
+      ✅ Examples:
+      <div class="w-25 bg-info">Width 25%</div>
+      <div class="w-50 bg-warning">Width 50%</div>
+      <div class="w-100 bg-success">Width 100%</div>
+      <div class="w-auto bg-danger">Auto Width</div>
+
+  🔹 Height Classes:
+      - Use `.h-{value}` to set element height.
+      - Values can be percentage-based (25, 50, 75, 100), `auto`, or `vh`.
+
+      ✅ Examples:
+      <div class="h-25 bg-primary">Height 25%</div>
+      <div class="h-50 bg-secondary">Height 50%</div>
+      <div class="h-100 bg-dark">Height 100%</div>
+      <div class="h-auto bg-light text-dark">Auto Height</div>
+
+  🔹 Viewport Height & Width:
+      - Use `.min-vw-100`, `.min-vh-100` for full viewport size.
+      - Useful for fullscreen sections or layout wrappers.
+
+      ✅ Examples:
+      <div class="min-vw-100 bg-info">Full Viewport Width</div>
+      <div class="min-vh-100 bg-warning">Full Viewport Height</div>
+
+  🔹 Max & Min Dimensions:
+      - Use `.min-w-*`, `.max-w-*`, `.min-h-*`, `.max-h-*` to set constraints.
+      - Great for responsive design and preventing overflow.
+
+      ✅ Example:
+      <img src="..." class="max-w-100" alt="Responsive Image">
+
+  🔹 Custom Sizing:
+      - Use inline styles for precise sizing.
+      - Example: `style="width: 150px; height: 200px;"`
+
+  🔹 Tips:
+      - Combine width/height with spacing (`p-*`, `m-*`) and display (`d-*`) for layout control.
+      - Use responsive breakpoints like `.w-100 w-sm-50` for mobile-first design.
+
+-->
+
+
