@@ -1,0 +1,770 @@
+<!-- CONTAINER
+
+  🔹 .container 
+      - Fixed-width layout
+      - Adjusts automatically based on screen size (responsive)
+      - Adds padding and centers content
+
+  🧠 Use Case:
+    Use .container when you want your layout/content to have a fixed width that auto-adjusts for different screen sizes. It keeps the content neat and centered.
+
+    ✅ Great for:
+      - Website main content area
+      - Cards, forms, and text blocks
+      - Blogs or articles
+      - Keeping layout clean and readable on all devices
+
+  🔹 .container-fluid
+      - 100% width layout
+      - Spans the full width of the screen, regardless of screen size
+
+  🧠 Use Case:
+    Use .container-fluid when you want your layout/content to stretch across the entire screen.
+
+    ✅ Great for:
+      - Banners
+      - Full-width images
+      - Fluid grid layouts
+      - Background sections
+-->
+
+
+<!-- TYPOGRAPHY
+
+  🔹 Headings
+      - Use <h1> to <h6> for HTML headings
+      - Bootstrap adds margin and styling by default
+      - You can also use .h1 to .h6 classes on any element for heading styles
+
+  ✅ Example:
+      <h1>Heading 1</h1>
+      <p class="h3">Paragraph with Heading 3 style</p>
+
+  🔹 Display Headings
+      - Larger, bolder headings for hero sections or banners
+      - Use .display-1 to .display-6
+
+  ✅ Example:
+      <h1 class="display-2">Big Title</h1>
+
+  🔹 Lead Text
+      - Use .lead to make a paragraph stand out (slightly larger and lighter)
+
+  ✅ Example:
+      <p class="lead">This is an important intro paragraph.</p>
+
+  🔹 Text Alignment
+      - Align text using .text-start, .text-center, .text-end
+
+  ✅ Example:
+      <p class="text-center">This text is centered.</p>
+
+  🔹 Text Colors
+      - Use classes like .text-primary, .text-success, .text-danger, etc.
+
+  ✅ Example:
+      <p class="text-danger">Error: Something went wrong.</p>
+
+  🔹 Font Weight & Style
+      - Use .fw-bold, .fw-normal, .fw-light for weight
+      - Use .fst-italic or .fst-normal for style
+
+  ✅ Example:
+      <p class="fw-bold fst-italic">Bold and italic text</p>
+
+  🔹 Text Transform
+      - .text-uppercase → ALL CAPS
+      - .text-lowercase → lowercase
+      - .text-capitalize → Capitalize First Letter
+
+  ✅ Example:
+      <p class="text-uppercase">uppercase text</p>
+
+  🔹 Text Truncation
+      - Use .text-truncate to shorten text with "..." (must be inside a block with width)
+
+  ✅ Example:
+      <p class="text-truncate" style="max-width: 200px;">This is a long text that will be truncated.</p>
+-->
+
+
+<!-- COLORS
+
+  🔹 Text Colors
+      - Use text color utility classes to style text with Bootstrap theme colors
+      - Format: .text-[color]
+
+  ✅ Common Colors:
+      - .text-primary       → Blue
+      - .text-secondary     → Gray
+      - .text-success       → Green
+      - .text-danger        → Red
+      - .text-warning       → Yellow/Orange
+      - .text-info          → Light Blue
+      - .text-light         → White (use on dark backgrounds)
+      - .text-dark          → Dark Gray
+      - .text-muted         → Muted light gray text
+      - .text-body          → Default text color
+
+  ✅ Example:
+      <p class="text-success">Success! Your action was completed.</p>
+
+  🔹 Background Colors
+      - Use .bg-[color] to set background color
+
+  ✅ Example:
+      <div class="bg-warning text-dark p-3">Warning Box</div>
+
+  🔹 Contextual Classes
+      - Combine bg and text classes for styled alerts, cards, buttons, etc.
+
+  ✅ Example:
+      <div class="bg-danger text-white p-3">Error: Something went wrong.</div>
+
+  🔹 Opacity Helpers
+      - Use .bg-opacity-[0–100] to control background color opacity
+      - Works only with background utility colors
+
+  ✅ Example:
+      <div class="bg-primary bg-opacity-50 text-white p-3">Semi-transparent blue box</div>
+
+  🔹 Custom Colors
+      - You can define custom colors using inline style or CSS
+      - Bootstrap also supports CSS variables for theming
+
+  ✅ Example:
+      <div style="background-color: #ff8800; color: white;">Custom Color Box</div>
+-->
+
+
+<!-- BACKGROUND COLORS
+
+  🔹 Background Utility Classes
+      - Use .bg-[color] to set the background color of an element
+      - Helps highlight sections, cards, buttons, alerts, etc.
+
+  ✅ Common Classes:
+      - .bg-primary       → Blue
+      - .bg-secondary     → Gray
+      - .bg-success       → Green
+      - .bg-danger        → Red
+      - .bg-warning       → Yellow/Orange
+      - .bg-info          → Light Blue
+      - .bg-light         → Light Gray/White
+      - .bg-dark          → Dark Gray/Black
+      - .bg-white         → Pure white
+      - .bg-transparent   → No background color
+
+  ✅ Example:
+      <div class="bg-success text-white p-3">
+        This is a success message box.
+      </div>
+
+  🔹 Combine with Text Colors
+      - For better contrast, combine with .text-[color]
+
+  ✅ Example:
+      <div class="bg-dark text-white p-3">
+        Dark background with white text
+      </div>
+
+  🔹 Background Opacity
+      - Control transparency with .bg-opacity-[0–100]
+      - Only works with Bootstrap background utility classes
+
+  ✅ Example:
+      <div class="bg-primary bg-opacity-25 text-dark p-3">
+        Semi-transparent blue background
+      </div>
+
+  🔹 Custom Background Color
+      - Use inline CSS or custom classes if you need specific colors
+
+  ✅ Example:
+      <div style="background-color: #00c896; color: white;" class="p-3">
+        Custom background color
+      </div>
+-->
+
+
+<!-- GRID SYSTEM
+
+  🔹 What is the Grid?
+      - Bootstrap’s grid system uses a 12-column layout
+      - Based on flexbox
+      - Helps create responsive layouts quickly
+
+  ✅ Basic Structure:
+      <div class="container">
+        <div class="row">
+          <div class="col">Column 1</div>
+          <div class="col">Column 2</div>
+        </div>
+      </div>
+
+  🔹 Columns
+      - Use .col to create equal-width columns
+      - Use .col-[number] for fixed-width (1 to 12)
+      - Total of 12 columns per row
+
+  ✅ Example:
+      <div class="col-6">Half Width</div>
+      <div class="col-4">1/3 Width</div>
+      <div class="col-8">2/3 Width</div>
+
+  🔹 Responsive Breakpoints
+      - You can target screen sizes using:
+        - .col-sm-  → ≥576px
+        - .col-md-  → ≥768px
+        - .col-lg-  → ≥992px
+        - .col-xl-  → ≥1200px
+        - .col-xxl- → ≥1400px
+
+  ✅ Example:
+      <div class="col-12 col-md-6">Full on mobile, half on desktop</div>
+
+  🔹 Nesting
+      - You can nest rows/columns inside a column
+
+  ✅ Example:
+      <div class="col">
+        <div class="row">
+          <div class="col">Nested Col</div>
+        </div>
+      </div>
+
+  🔹 Auto Layout
+      - Columns without a number auto adjust to fit
+
+  ✅ Example:
+      <div class="col">Auto 1</div>
+      <div class="col">Auto 2</div>
+
+  🔹 Offset
+      - Use .offset-[breakpoint]-[number] to shift columns
+
+  ✅ Example:
+      <div class="col-md-4 offset-md-4">Centered Column</div>
+
+  🔹 Gutters (Spacing between columns)
+      - Use .g-[1–5] or .gy- / .gx- to control vertical/horizontal spacing
+
+  ✅ Example:
+      <div class="row g-3">3 spacing between columns and rows</div>
+
+-->
+
+
+<!-- PADDING
+
+  🔹 What is Padding?
+      - Padding is the space **inside** an element (between content and border)
+      - Bootstrap provides utility classes to control padding easily
+
+  🔹 Class Format:
+      .p{side}-{breakpoint?}-{size}
+
+      - p  → padding on all sides
+      - pt → padding-top
+      - pe → padding-end (right in LTR)
+      - pb → padding-bottom
+      - ps → padding-start (left in LTR)
+      - px → left and right (horizontal)
+      - py → top and bottom (vertical)
+
+  🔹 Size Scale:
+      - 0 (0px)
+      - 1 (0.25rem)
+      - 2 (0.5rem)
+      - 3 (1rem)
+      - 4 (1.5rem)
+      - 5 (3rem)
+
+  ✅ Example:
+      <div class="p-3">Padding on all sides (1rem)</div>
+      <div class="pt-4 pb-2">Top: 1.5rem, Bottom: 0.5rem</div>
+      <div class="px-5">Left and Right: 3rem</div>
+
+  🔹 Responsive Padding
+      - You can use responsive breakpoints: sm, md, lg, xl, xxl
+
+  ✅ Example:
+      <div class="p-2 p-md-4">Smaller padding on mobile, larger on desktop</div>
+
+  🔹 Removing Padding
+      - Use .p-0 or specific side classes like .pt-0 to remove padding
+
+  ✅ Example:
+      <div class="py-0 px-3">No vertical padding, 1rem horizontal padding</div>
+
+-->
+
+
+<!-- MARGIN
+
+  🔹 What is Margin?
+      - Margin is the space **outside** an element (between the element’s border and surrounding elements)
+      - Bootstrap provides utility classes to control margin easily
+
+  🔹 Class Format:
+      .m{side}-{breakpoint?}-{size}
+
+      - m  → margin on all sides
+      - mt → margin-top
+      - me → margin-end (right in LTR)
+      - mb → margin-bottom
+      - ms → margin-start (left in LTR)
+      - mx → left and right (horizontal)
+      - my → top and bottom (vertical)
+
+  🔹 Size Scale:
+      - 0 (0px)
+      - 1 (0.25rem)
+      - 2 (0.5rem)
+      - 3 (1rem)
+      - 4 (1.5rem)
+      - 5 (3rem)
+
+  ✅ Example:
+      <div class="m-3">Margin on all sides (1rem)</div>
+      <div class="mt-4 mb-2">Top: 1.5rem, Bottom: 0.5rem</div>
+      <div class="mx-5">Left and Right: 3rem</div>
+
+  🔹 Responsive Margin
+      - You can use responsive breakpoints: sm, md, lg, xl, xxl
+
+  ✅ Example:
+      <div class="m-2 m-md-4">Smaller margin on mobile, larger on desktop</div>
+
+  🔹 Removing Margin
+      - Use .m-0 or specific side classes like .mt-0 to remove margin
+
+  ✅ Example:
+      <div class="my-0 mx-3">No vertical margin, 1rem horizontal margin</div>
+
+-->
+
+
+<!-- RESPONSIVE COLUMNS
+
+  🔹 What are Responsive Columns?
+      - Bootstrap’s grid system allows creating flexible, responsive layouts using rows and columns
+      - Columns adapt based on screen size using breakpoint-specific classes
+
+  🔹 Grid Basics:
+      - The grid has 12 columns per row
+      - You place content inside columns that specify how many of the 12 parts they take
+      - Columns automatically stack vertically on smaller screens unless specified otherwise
+
+  🔹 Class Format for Columns:
+      .col-{breakpoint}-{size}
+
+      - col → auto width columns that share available space equally
+      - {breakpoint} → responsive breakpoint (sm, md, lg, xl, xxl)
+      - {size} → number from 1 to 12 (how many columns to span)
+
+  🔹 Breakpoints:
+      - sm  (≥576px)
+      - md  (≥768px)
+      - lg  (≥992px)
+      - xl  (≥1200px)
+      - xxl (≥1400px)
+
+  ✅ Examples:
+      <div class="row">
+        <div class="col-12 col-md-6">Full width on mobile, half width on md and up</div>
+        <div class="col-12 col-md-6">Full width on mobile, half width on md and up</div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">One-third width on sm and up</div>
+        <div class="col-sm-8">Two-thirds width on sm and up</div>
+      </div>
+
+  🔹 Auto Layout Columns:
+      - Using just .col without a number shares space evenly
+      - Can combine with breakpoint for responsive behavior
+
+  ✅ Example:
+      <div class="row">
+        <div class="col">Auto width</div>
+        <div class="col">Auto width</div>
+        <div class="col">Auto width</div>
+      </div>
+
+  🔹 Nesting Columns:
+      - You can nest rows and columns inside a column for more complex layouts
+
+  🔹 Column Ordering:
+      - Use order-{breakpoint}-{number} classes to change column order responsively
+
+  ✅ Example:
+      <div class="row">
+        <div class="col order-2">Second on default</div>
+        <div class="col order-1">First on default</div>
+      </div>
+
+  🔹 Offsetting Columns:
+      - Use offset-{breakpoint}-{size} to add space to the left of a column
+
+  ✅ Example:
+      <div class="row">
+        <div class="col-md-4 offset-md-4">Centered column on md and up</div>
+      </div>
+
+-->
+
+
+<!-- FLEXBOX LAYOUT
+
+  🔹 What is Flexbox?
+      - Flexbox is a layout model that arranges elements in a row or column.
+      - It helps distribute space and align items efficiently inside a container.
+
+  🔹 Basic Setup:
+      - Use `.d-flex` to make a container a flexbox.
+
+      ✅ Example:
+      <div class="d-flex">...</div>
+
+  🔹 Direction:
+      - Use `.flex-row` for horizontal layout (default)
+      - Use `.flex-column` for vertical layout
+
+      ✅ Example:
+      <div class="d-flex flex-column">Vertical layout</div>
+
+  🔹 Justify Content (Main Axis):
+      - Controls horizontal alignment in `.flex-row`
+      - Controls vertical alignment in `.flex-column`
+
+      .justify-content-{value}
+        - start → align to start
+        - end → align to end
+        - center → center items
+        - between → space between
+        - around → space around
+        - evenly → equal spacing
+
+      ✅ Example:
+      <div class="d-flex justify-content-between">...</div>
+
+  🔹 Align Items (Cross Axis):
+      - Aligns items vertically in `.flex-row`
+      - Aligns items horizontally in `.flex-column`
+
+      .align-items-{value}
+        - start → align to start
+        - end → align to end
+        - center → center items
+        - baseline → align text baselines
+        - stretch → stretch to fill (default)
+
+      ✅ Example:
+      <div class="d-flex align-items-center">...</div>
+
+  🔹 Align Self (Per Item):
+      - Override alignment for a single item
+
+      .align-self-{value}
+
+      ✅ Example:
+      <div class="align-self-end">Align this item to end</div>
+
+  🔹 Wrapping:
+      - Use `.flex-wrap` to allow items to wrap
+      - Use `.flex-nowrap` to prevent wrapping (default)
+
+      ✅ Example:
+      <div class="d-flex flex-wrap">...</div>
+
+  🔹 Flex Grow/Shrink:
+      - .flex-grow-1 → item can grow to fill space
+      - .flex-shrink-0 → item won’t shrink
+
+      ✅ Example:
+      <div class="flex-grow-1">Takes up remaining space</div>
+
+  🔹 Order:
+      - Use `.order-{n}` to control item order (0–5 by default)
+
+      ✅ Example:
+      <div class="order-1">This appears first</div>
+
+  🔹 Responsive Flex:
+      - Add breakpoints: `.d-sm-flex`, `.flex-md-column`, etc.
+
+      ✅ Example:
+      <div class="d-flex flex-column flex-md-row">Stack on mobile, row on desktop</div>
+
+-->
+
+
+<!-- IMAGES
+
+  🔹 What are Image Utilities?
+      - Bootstrap provides helper classes to style and control images easily.
+      - These utilities help with responsiveness, alignment, shapes, and spacing.
+
+  🔹 Responsive Images:
+      - Use `.img-fluid` to make an image scale nicely with the parent container
+      - Applies `max-width: 100%` and `height: auto`
+
+      ✅ Example:
+      <img src="photo.jpg" class="img-fluid" alt="Responsive image">
+
+  🔹 Image Thumbnails:
+      - Use `.img-thumbnail` for a bordered, padded image with rounded corners
+
+      ✅ Example:
+      <img src="avatar.jpg" class="img-thumbnail" alt="Profile picture">
+
+  🔹 Image Shapes:
+      - `.rounded` → slightly rounded corners
+      - `.rounded-circle` → circular image
+      - `.rounded-0` → no rounding (square)
+
+      ✅ Examples:
+      <img src="pic.jpg" class="rounded" alt="">
+      <img src="user.jpg" class="rounded-circle" alt="">
+      <img src="box.jpg" class="rounded-0" alt="">
+
+  🔹 Image Alignment:
+      - Use Bootstrap’s text alignment utilities with inline images:
+        - `.text-start`, `.text-center`, `.text-end`
+
+      ✅ Example:
+      <div class="text-center">
+        <img src="logo.png" class="img-fluid" alt="Centered image">
+      </div>
+
+  🔹 Image Float:
+      - `.float-start` → float left
+      - `.float-end` → float right
+      - `.float-none` → remove float
+
+      ✅ Example:
+      <img src="icon.png" class="float-end" alt="Floated right">
+
+  🔹 Image Width & Height:
+      - You can control dimensions using utility classes like:
+        - `.w-25`, `.w-50`, `.w-100` → width: 25%, 50%, 100%
+        - `.h-auto`, `.h-100` → height utilities
+
+      ✅ Example:
+      <img src="banner.jpg" class="w-100 h-auto" alt="Full-width image">
+
+  🔹 Responsive Display:
+      - Combine with responsive display classes like `.d-none d-md-block` to show/hide images on different screens
+
+      ✅ Example:
+      <img src="desktop.jpg" class="d-none d-md-block" alt="Visible on desktop only">
+
+-->
+
+
+<!-- CARDS
+
+  🔹 What are Cards?
+      - Cards are flexible and extensible content containers.
+      - Used to display content such as images, text, lists, buttons, etc.
+      - Comes with options for headers, footers, content alignment, and more.
+
+  🔹 Basic Card:
+      - Use `.card` as the main wrapper
+      - Inside it, use `.card-body` to wrap main content
+
+      ✅ Example:
+      <div class="card">
+        <div class="card-body">
+          This is a basic card.
+        </div>
+      </div>
+
+  🔹 Card with Title & Text:
+      - Use `.card-title` for heading
+      - Use `.card-text` for supporting content
+
+      ✅ Example:
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card Title</h5>
+          <p class="card-text">This is some text inside the card.</p>
+        </div>
+      </div>
+
+  🔹 Card with Image:
+      - Use `.card-img-top` or `.card-img-bottom` to add images
+
+      ✅ Example:
+      <div class="card">
+        <img src="img.jpg" class="card-img-top" alt="Top image">
+        <div class="card-body">
+          <p class="card-text">Image on top</p>
+        </div>
+      </div>
+
+  🔹 Card Header & Footer:
+      - Use `.card-header` and `.card-footer` for additional sections
+
+      ✅ Example:
+      <div class="card">
+        <div class="card-header">Header</div>
+        <div class="card-body">Body Content</div>
+        <div class="card-footer">Footer</div>
+      </div>
+
+  🔹 Card with List Group:
+      - Use `.list-group` inside `.card` for lists
+
+      ✅ Example:
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Item 1</li>
+          <li class="list-group-item">Item 2</li>
+        </ul>
+      </div>
+
+  🔹 Card Layout (Grid):
+      - Use Bootstrap Grid (`.row` & `.col`) for card layout
+
+      ✅ Example:
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">Card 1</div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">Card 2</div>
+        </div>
+      </div>
+
+  🔹 Card Alignment:
+      - Use text alignment utilities: `.text-start`, `.text-center`, `.text-end`
+
+      ✅ Example:
+      <div class="card text-center">
+        <div class="card-body">Centered Card</div>
+      </div>
+
+  🔹 Background & Border:
+      - Use contextual classes: `.bg-primary`, `.text-white`, `.border-success`, etc.
+
+      ✅ Example:
+      <div class="card bg-success text-white">
+        <div class="card-body">Green background card</div>
+      </div>
+
+  🔹 Horizontal Cards:
+      - Use `.row` and `.col-md` inside `.card` for horizontal layout
+
+      ✅ Example:
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Horizontal Card</h5>
+              <p class="card-text">Text content here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+-->
+
+
+<!-- FORMS
+
+  🔹 What are Forms?
+      - Forms are used to collect user input.
+      - Bootstrap provides form styles for inputs, labels, checkboxes, radios, selects, and more.
+      - Helps with consistent design and layout across browsers.
+
+  🔹 Basic Form Structure:
+      - Wrap inputs inside a `<form>` tag
+      - Use `.form-label`, `.form-control`, etc.
+
+      ✅ Example:
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" placeholder="Enter name">
+        </div>
+      </form>
+
+  🔹 Form Inputs:
+      - Use `.form-control` for text, email, password, number, textarea, etc.
+
+      ✅ Example:
+      <input type="email" class="form-control" placeholder="Enter email">
+
+  🔹 Labels & Placeholders:
+      - Use `<label>` with `.form-label`
+      - Use `placeholder` to show hint inside input
+
+      ✅ Example:
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" placeholder="you@example.com">
+
+  🔹 Form Select:
+      - Use `<select class="form-select">` for dropdowns
+
+      ✅ Example:
+      <select class="form-select">
+        <option>Select option</option>
+        <option>Option 1</option>
+      </select>
+
+  🔹 Checkboxes & Radios:
+      - Use `.form-check`, `.form-check-input`, and `.form-check-label`
+
+      ✅ Example:
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check1">
+        <label class="form-check-label" for="check1">Check me</label>
+      </div>
+
+  🔹 Form Layouts:
+      - Use `.row` and `.col` for grid layout in forms
+
+      ✅ Example:
+      <form>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+      </form>
+
+  🔹 Form Validation States:
+      - Use `.is-valid` and `.is-invalid` to show validation feedback
+
+      ✅ Example:
+      <input type="text" class="form-control is-valid">
+      <div class="valid-feedback">Looks good!</div>
+
+  🔹 Disabled & Readonly:
+      - Use `disabled` or `readonly` attributes
+
+      ✅ Example:
+      <input type="text" class="form-control" disabled placeholder="Disabled input">
+
+  🔹 Inline Forms:
+      - Use `.row`, `.col-auto`, and spacing utilities for inline layout
+
+      ✅ Example:
+      <form class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label class="col-form-label">Email</label>
+        </div>
+        <div class="col-auto">
+          <input type="email" class="form-control">
+        </div>
+      </form>
+
+-->
